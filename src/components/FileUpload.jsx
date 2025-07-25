@@ -60,7 +60,7 @@ const FileUpload = () => {
         }
         
         // Try to upload to backend
-        const response = await fetch('https://saasend-production.up.railway.app/api/upload', {
+        const response = await fetch('/api/upload', {
           method: 'POST',
           body: formData
         })
@@ -105,7 +105,7 @@ const FileUpload = () => {
   React.useEffect(() => {
     const loadUploadConfig = async () => {
       try {
-        const response = await fetch('https://saasend-production.up.railway.app/api/upload/config')
+        const response = await fetch('/api/upload/config')
         if (response.ok) {
           const config = await response.json()
           setUploadConfig(config)
@@ -137,7 +137,7 @@ const FileUpload = () => {
 
     const checkStatus = async () => {
       try {
-        const response = await fetch(`https://saasend-production.up.railway.app/api/upload/status/${documentId}`)
+        const response = await fetch(`/api/upload/status/${documentId}`)
         if (response.ok) {
           const statusData = await response.json()
           

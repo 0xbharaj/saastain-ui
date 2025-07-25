@@ -19,11 +19,11 @@ const ComplianceInsights = () => {
       setLoading(true)
       
       // Fetch documents and analyze compliance
-      const docsResponse = await fetch('https://saasend-production.up.railway.apphttps://saasend-production.up.railway.app/api/documents')
+      const docsResponse = await fetch('/api/documents')
       const docsData = await docsResponse.json()
       
       // Fetch available frameworks
-      const frameworksResponse = await fetch('https://saasend-production.up.railway.apphttps://saasend-production.up.railway.app/api/documents/global/frameworks')
+      const frameworksResponse = await fetch('/api/documents/global/frameworks')
       const frameworksData = await frameworksResponse.json()
 
       const analysis = analyzeCompliance(docsData.documents || [], frameworksData.frameworks || [])

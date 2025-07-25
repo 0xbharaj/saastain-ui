@@ -7,7 +7,7 @@ export default defineConfig({
     port: 3000,
     proxy: {
       '/api': {
-        target: 'https://saasend-production.up.railway.app',
+        target: 'https://saasend-production.up.railway.app/',
         changeOrigin: true
       }
     }
