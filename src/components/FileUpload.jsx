@@ -221,7 +221,7 @@ const FileUpload = () => {
     <div className="space-y-6">
       <div>
         <h1 className="text-2xl font-bold text-gray-900 dark:text-white">Upload Documents</h1>
-        <p className="text-gray-600 dark:text-gray-400">Upload your ESG reports, policies, and other documents for analysis</p>
+        <p className="text-gray-600 dark:text-gray-400">Upload your ESG reports and other documents for AI analysis</p>
       </div>
 
       {/* Upload Area */}
@@ -250,25 +250,7 @@ const FileUpload = () => {
         )}
       </div>
 
-      {/* Supported Document Types */}
-      <div className="card p-6">
-        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Supported Document Types</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {[
-            { type: 'ESG Reports', description: 'Annual sustainability reports, ESG disclosures' },
-            { type: 'Governance Policies', description: 'Board structures, governance frameworks' },
-            { type: 'Environmental Data', description: 'Emissions reports, environmental metrics' },
-            { type: 'Social Policies', description: 'HR policies, diversity reports, social impact' },
-            { type: 'Compliance Documents', description: 'Regulatory filings, compliance certificates' },
-            { type: 'Financial Reports', description: 'Annual reports with sustainability sections' }
-          ].map((docType, index) => (
-            <div key={index} className="p-4 border border-gray-200 dark:border-gray-700 rounded-lg">
-              <h4 className="font-medium text-gray-900 dark:text-white mb-1">{docType.type}</h4>
-              <p className="text-sm text-gray-600 dark:text-gray-400">{docType.description}</p>
-            </div>
-          ))}
-        </div>
-      </div>
+
 
       {/* Uploaded Files */}
       {uploadedFiles.length > 0 && (
@@ -340,7 +322,25 @@ const FileUpload = () => {
           </div>
         </div>
       )}
-
+      {/* Supported Document Types */}
+      <div className="card p-6">
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Supported Document Types</h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {[
+            { type: 'ESG Reports', description: 'Annual sustainability reports, ESG disclosures' },
+            { type: 'Governance Policies', description: 'Board structures, governance frameworks' },
+            { type: 'Environmental Data', description: 'Emissions reports, environmental metrics' },
+            { type: 'Social Policies', description: 'HR policies, diversity reports, social impact' },
+            { type: 'Compliance Documents', description: 'Regulatory filings, compliance certificates' },
+            { type: 'Financial Reports', description: 'Annual reports with sustainability sections' }
+          ].map((docType, index) => (
+            <div key={index} className="p-4 border border-gray-200 dark:border-gray-700 rounded-lg">
+              <h4 className="font-medium text-gray-900 dark:text-white mb-1">{docType.type}</h4>
+              <p className="text-sm text-gray-600 dark:text-gray-400">{docType.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
       {/* Processing Info */}
       <div className="card p-6 bg-blue-50 dark:bg-blue-900/20 border-blue-200 dark:border-blue-800">
         <h3 className="text-lg font-semibold text-blue-900 dark:text-blue-300 mb-2">How Document Processing Works</h3>

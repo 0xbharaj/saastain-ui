@@ -1,12 +1,13 @@
 import React from 'react'
 import { X, BarChart3, MessageSquare, Upload, FileText, Settings, TrendingUp, Brain } from 'lucide-react'
+import './s.css'
 
 const Sidebar = ({ open, setOpen, currentView, setCurrentView }) => {
   const menuItems = [
     { id: 'dashboard', label: 'Dashboard', icon: BarChart3 },
-    { id: 'chat', label: 'ESG Co-Pilot', icon: MessageSquare },
-    { id: 'upload', label: 'Upload Documents', icon: Upload },
-    { id: 'insights', label: 'Compliance Insights', icon: TrendingUp },
+    { id: 'chat', label: 'ESG AI', icon: MessageSquare },
+    { id: 'upload', label: 'Upload', icon: Upload },
+    { id: 'insights', label: 'Insights', icon: TrendingUp },
     { id: 'reports', label: 'Reports', icon: FileText },
     { id: 'settings', label: 'Settings', icon: Settings },
   ]
@@ -23,7 +24,7 @@ const Sidebar = ({ open, setOpen, currentView, setCurrentView }) => {
 
       {/* Sidebar */}
       <div className={`
-        fixed inset-y-0 left-0 z-30 w-64 bg-white dark:bg-black  shadow-lg transform transition-all duration-300 ease-in-out
+        fixed inset-y-0 left-0 z-30 w-55 bg-white dark:bg-black  shadow-lg transform transition-all duration-300 ease-in-out
         lg:translate-x-0 lg:static lg:inset-0 lg:shadow-none
         ${open ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
       `}>
@@ -42,7 +43,7 @@ const Sidebar = ({ open, setOpen, currentView, setCurrentView }) => {
         {/* Desktop Header */}
   
 
-        <nav className="mt-4 lg:mt-6 px-4 pb-4 overflow-y-auto h-full">
+        <nav className="mt-4 heehe lg:mt-6 px-3 pb-4 overflow-y-auto h-full">
           <ul className="space-y-1">
             {menuItems.map((item) => {
               const Icon = item.icon
