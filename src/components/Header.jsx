@@ -25,7 +25,7 @@ const Header = ({ sidebarOpen, setSidebarOpen, currentView, setCurrentView }) =>
           <div className="flex items-center space-x-2">
             <Brain className="h-6 w-6 sm:h-8 sm:w-8 text-blue-600 dark:text-blue-400" />
             <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-2">
-              <h1 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white">Saastain</h1>
+              <h1 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white">SaaStain</h1>
               <span className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 hidden sm:inline">ESG Co-Pilot</span>
             </div>
           </div>

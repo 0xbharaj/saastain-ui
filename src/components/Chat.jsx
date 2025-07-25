@@ -45,7 +45,7 @@ const Chat = () => {
     {
       id: 1,
       type: 'bot',
-      content: "Hello! I'm your ESG Co-Pilot. I can help you with ESG compliance, reporting standards like CSRD and ISSB, and analyze your uploaded documents. What would you like to know?",
+      content: "Hello! I'm your SaaStain ESG Co-Pilot. I can help you with ESG compliance, reporting standards like CSRD and ISSB, and analyze your uploaded documents. What would you like to know?",
       timestamp: new Date(),
       confidence: null,
       sources: []
@@ -204,7 +204,7 @@ I can compare your current board structure with these requirements if you've upl
     <ChatErrorBoundary>
       <div className="flex flex-col h-[calc(100vh-8rem)]">
         <div className="mb-6">
-          <h1 className="text-2xl font-bold text-gray-900 dark:text-white">ESG Co-Pilot</h1>
+          <h1 className="text-2xl font-bold text-gray-900 dark:text-white">ESG AI Co-Pilot</h1>
           <p className="text-gray-600 dark:text-gray-400">Ask questions about ESG compliance, reporting standards, and your documents</p>
         </div>
 

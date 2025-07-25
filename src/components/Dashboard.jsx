@@ -63,7 +63,7 @@ const Dashboard = ({ setCurrentView }) => {
         // Add some default activities if none exist
         if (activities.length === 0) {
           activities.push(
-            { id: 1, type: 'info', message: 'Welcome to Saastain ESG Co-Pilot', time: 'now', status: 'info' },
+            { id: 1, type: 'info', message: 'Welcome to SaaStain ESG Co-Pilot', time: 'now', status: 'info' },
             { id: 2, type: 'info', message: 'Upload documents to get started', time: 'now', status: 'info' }
           )
         }
@@ -80,7 +80,7 @@ const Dashboard = ({ setCurrentView }) => {
           chatSessions: 0
         })
         setRecentActivity([
-          { id: 1, type: 'info', message: 'Welcome to Saastain ESG Co-Pilot', time: 'now', status: 'info' }
+          { id: 1, type: 'info', message: 'Welcome to SaaStain ESG Co-Pilot', time: 'now', status: 'info' }
         ])
       }
     }

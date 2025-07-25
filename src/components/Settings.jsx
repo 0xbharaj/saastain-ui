@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import { Moon, Sun } from 'lucide-react'
+import './s.css'
 
 const Settings = () => {
-    const [theme, setTheme] = useState('light')
+    const [theme, setTheme] = useState('dark')
 
     // Load theme from localStorage on component mount
     useEffect(() => {
-        const savedTheme = localStorage.getItem('theme') || 'light'
+        const savedTheme = localStorage.getItem('theme') || 'dark'
         setTheme(savedTheme)
         applyTheme(savedTheme)
     }, [])
@@ -29,17 +30,17 @@ const Settings = () => {
     }
 
     return (
-        <div className="space-y-6">
+        <div className="space-y-3 wawa">
             <div>
                 <h1 className="text-2xl font-bold text-gray-900 dark:text-white">Settings</h1>
                 <p className="text-gray-600 dark:text-gray-400">Customize your ESG Co-Pilot experience</p>
             </div>
 
             {/* Theme Settings */}
-            <div className="card p-6">
+            <div className="card p-6 ">
                 <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-6">Theme</h2>
 
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-2 lolo gap-4">
                     <button
                         onClick={() => handleThemeChange('light')}
                         className={`flex items-center justify-center p-4 rounded-lg border-2 transition-colors ${theme === 'light'
@@ -48,7 +49,7 @@ const Settings = () => {
                             }`}
                     >
                         <Sun className="h-6 w-6 mr-3 text-yellow-500" />
-                        <span className="text-lg font-medium text-gray-900 dark:text-white">Light</span>
+                        <span className="text-lg font-medium text-gray-900 dark:text-white"></span>
                     </button>
 
                     <button
@@ -59,7 +60,7 @@ const Settings = () => {
                             }`}
                     >
                         <Moon className="h-6 w-6 mr-3 text-blue-400" />
-                        <span className="text-lg font-medium text-gray-900 dark:text-white">Dark</span>
+                        <span className="text-lg font-medium text-gray-900 dark:text-white"></span>
                     </button>
                 </div>
             </div>
