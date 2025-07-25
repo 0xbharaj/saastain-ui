@@ -16,11 +16,11 @@ const Dashboard = ({ setCurrentView }) => {
     const loadDashboardData = async () => {
       try {
         // Fetch documents count
-        const docsResponse = await fetch('/api/documents?limit=1')
+        const docsResponse = await fetch('https://saasend-production.up.railway.apphttps://saasend-production.up.railway.apphttps://saasend-production.up.railway.app/api/documents?limit=1')
         const docsData = await docsResponse.json()
 
         // Fetch chat sessions
-        const chatResponse = await fetch('/api/chat')
+        const chatResponse = await fetch('https://saasend-production.up.railway.apphttps://saasend-production.up.railway.app/api/chat')
         const chatData = await chatResponse.json()
 
         // Calculate compliance score based on documents and frameworks

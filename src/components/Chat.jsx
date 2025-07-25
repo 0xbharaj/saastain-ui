@@ -79,7 +79,7 @@ const Chat = () => {
 
     try {
       // Simulate API call to backend
-      const response = await fetch('/api/chat', {
+      const response = await fetch('https://saasend-production.up.railway.app/api/chat', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

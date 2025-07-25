@@ -15,7 +15,7 @@ const ReportGeneration = () => {
 
   const loadReportTypes = async () => {
     try {
-      const response = await fetch('/api/reports/types')
+      const response = await fetch('https://saasend-production.up.railway.app/api/reports/types')
       const data = await response.json()
       setReportTypes(data.types)
     } catch (error) {
@@ -25,7 +25,7 @@ const ReportGeneration = () => {
 
   const loadReportHistory = async () => {
     try {
-      const response = await fetch('/api/reports/history')
+      const response = await fetch('https://saasend-production.up.railway.app/api/reports/history')
       const data = await response.json()
       setReportHistory(data.reports || [])
     } catch (error) {
@@ -36,7 +36,7 @@ const ReportGeneration = () => {
   const generateReport = async () => {
     setGenerating(true)
     try {
-      const response = await fetch('/api/reports/generate', {
+      const response = await fetch('https://saasend-production.up.railway.app/api/reports/generate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ reportType: selectedType })
@@ -58,7 +58,7 @@ const ReportGeneration = () => {
 
   const exportReport = async (format = 'json') => {
     try {
-      const response = await fetch('/api/reports/export', {
+      const response = await fetch('https://saasend-production.up.railway.app/api/reports/export', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ 
